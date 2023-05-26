@@ -67,17 +67,28 @@ function playRound(playerSelection, computerSelection){
         round++;
         document.getElementById("round").innerHTML = `Round ${round}`;
     } else {
-        console.log("Game Over")
-        resetGame();
-        updateScore();
+        console.log("Game Over");
+        gameResult();
     }
+
     console.log(round)
+}
+function gameResult(){
+    if (round === 5 && pScore === cScore){
+        document.getElementById("round").innerHTML = "TIE!! (Resetting)"
+    } else if (round === 5 && pScore > cScore){
+        document.getElementById("round").innerHTML = "GG! EZ! (Resetting)"
+    } else if (round === 5 && pScore < cScore){
+        document.getElementById("round").innerHTML = "You got smoked on!! (Resetting)"
+    }
+    setTimeout(resetGame, 2500);
 }
 
 function resetGame(){
     pScore = 0;
     cScore = 0;
     round = 1;
+    updateScore();
 }
 
 //an eventlistener to the buttons for player selection from 1-3
