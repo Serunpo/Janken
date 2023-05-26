@@ -5,25 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janken</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 id="title">Jankenpon!</h1>
     <h1 id="winnerInd">Get Ready for Battle!</h1>
+    <h1 id="round">Round 1</h1>
     <div class="choices">
-        <label>Player</label>
-        <img id="playerImg">
-            <div class="score">
-                <p>0</p>
-                <label>Score</label>
-                <p>0</p>
-            </div>
-        <label>Computer</label>
-        <img id="ComputerImg">
+        <div class="playerContainer">
+            <label>Player</label>
+            <img id="playerImg">
+        </div>
+        <div class="score">
+            <p id="playerScore">0</p>
+            <label id="scoreTitle">Score</label>
+            <p id="computerScore">0</p>
+        </div>
+        <div class="computerContainer">
+            <label>Computer</label>
+            <img id="computerImg">
+        </div>
     </div> 
     <div class="btnContainer">
         <button type="button" id="rock" class="rpsBtn"><img src="images/rock.png" class="rockImg"></button>
-        <button type="button" id="paper" class="rpsBtn">Paper</button>
+        <button type="button" id="paper" class="rpsBtn"><img src="images/paper.png" class="paperImg"></button>
         <button type="button" id="scissor" class="rpsBtn"><img src="images/scissor.png" class="scissorImg"></button>
     </div>
     
